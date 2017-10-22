@@ -9,10 +9,10 @@ DSEG	ENDS
 ;
 CSEG	SEGMENT
 		ASSUME  CS:CSEG, DS:DSEG
-START:	MOV	AX, DSEG
-		MOV 	DS, AX
-		MOV	AX, XXX
-		XOR		DX, DX
+START:	MOV			AX, DSEG
+		MOV 		DS, AX
+		MOV			AX, XXX
+		XOR			DX, DX
 		;------------------------------------------------------
 		;相加
 		; ;X2
@@ -40,22 +40,22 @@ START:	MOV	AX, DSEG
 		; MOV		AX, XXX
 		; MOV		DX, AX
 		; MOV		CL, 4
-		; SHL			AX, CL
+		; SHL		AX, CL
 		; MOV		CL, 12
-		; SHR			DX, CL
+		; SHR		DX, CL
 		; ;------------------------------------------------------
 		;
 		; ;------------------------------------------------------
 		; ;乘法
-		; MOV	AX, XXX
-		; MOV 	DX, 16
-		; MUL	 DX
+		; MOV		AX, XXX
+		; MOV 		DX, 16
+		; MUL	 	DX
 		; ;------------------------------------------------------
 		;SAVE
-		MOV	WORD PTR ZZZ, AX
-		MOV	WORD PTR ZZZ + 2, DX
+		MOV			WORD PTR ZZZ, AX
+		MOV			WORD PTR ZZZ + 2, DX
 		;END
-		MOV 	AH, 4CH
-		INT		21H
+		MOV 		AH, 4CH
+		INT			21H
 CSEG	ENDS
 		END START
