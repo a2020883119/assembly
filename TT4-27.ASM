@@ -1,6 +1,7 @@
 ;TT4-27.ASM
 ;从F000:0000H开始个200个字节作为无符号整数，求他们的和，并用十进制在屏幕显示出来
 ;此程序无法直接运行但是可以调试运行，第二个了。。。
+;
 DSEG        SEGMENT
 DSEG        ENDS
 
@@ -36,6 +37,7 @@ AXTODA     PROC
 
            MOV        BX, 10                   ;除数
            MOV        CX, 0                    ;计数器清零
+           XOR        DX, DX
 DECLOOP: 
            DIV        BX                       ;除
            PUSH       DX                       ;保存余数到堆栈
@@ -49,7 +51,7 @@ DECLOOP:
 DECEND:  
            POP        AX                       ;从堆栈中取出余数
            ADD        AX, 30H
-           ; CALL       PUTCH                     ;显示
+           CALL       PUTCH                     ;显示
            LOOP       DECEND                    ;循环继续
            
            POP        BX

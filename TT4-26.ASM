@@ -12,7 +12,7 @@ START:
            XOR       AX, AX
 NEXT:
    
-           CMP       AX, 10            ;范围设置
+           CMP       AX, 1024            ;范围设置
            JZ        OVER
            INC       AX                ;下一个数
            CALL      IFPRIME           ;是否是素数
@@ -69,6 +69,7 @@ AXTODA     PROC
 
            MOV        BX, 10                   ;除数
            MOV        CX, 0                    ;计数器清零
+           XOR        DX, DX
 DECLOOP: 
            DIV        BX                       ;除
            PUSH       DX                       ;保存余数到堆栈
