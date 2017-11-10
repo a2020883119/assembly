@@ -1,14 +1,14 @@
 ;TT4-30.ASM
 DSEG     SEGMENT
 ;         
-ASCII    DB '................',
-         DB '................', 
-         DB '. !"',"#%%&'(.)*+,-",
+ASCII    DB '................'
+         DB '................'
+         DB '. !"',"#%%&'(.)*+,-"
          DB './0123456789:;<.',
          DB '=>?@ABCDEFGHIJKL',
-         DB 'MNOP.QRSTUVWXYZ[',
-         DB '\]^_`abcd.efghij',
-         DB 'klmnopqrstuvwx.y',
+         DB 'MNOP.QRSTUVWXYZ['
+         DB '\]^_`abcd.efghij'
+         DB 'klmnopqrstuvwx.y'
          DB 'z{|}~.$.........'         
 DSEG     ENDS
 
