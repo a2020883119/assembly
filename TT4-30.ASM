@@ -1,4 +1,6 @@
 ;TT4-30.ASM
+;自己写的DEBUG 的D指令
+
 DSEG     SEGMENT
 ;         
 ASCII    DB '................'
